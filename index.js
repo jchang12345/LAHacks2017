@@ -22,8 +22,14 @@ $.get('https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=DEMO_KEY&nutr
 			}
 		}
 	}
+<<<<<<< HEAD
 	console.log(rtn);
    return rtn;
+=======
+   console.log(rtn);
+  // result.innerHTML=rtn[0].value;
+   result.innerHTML=(data.report.foods[0].name);
+>>>>>>> origin/master
 });
 }
 
