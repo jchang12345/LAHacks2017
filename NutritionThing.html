@@ -16,7 +16,7 @@
   width: 50px;
   height: 50px;
   position: absolute;
-  background-color: red;
+  
 }
 </style>
 <link rel="stylesheet" type="text/css" href="NutritionHelper.css"/>
@@ -91,23 +91,45 @@ myLink.onclick = function(){
 </p> 
 
 <div id ="container">
-<div id ="animate"></div>
+<div id ="animate"><img src="http://stuffpoint.com/fruit/image/166587-fruit-oranges.jpg" style="margin:auto; width:125px;display:block" /></div>
 </div>
 <script>
 function myMove() {
   var elem = document.getElementById("animate");   
   var pos = 0;
+  var pos2=350;
+  var firstBool=false;
+  var id2=setInterval(frame,1);
   var id = setInterval(frame, 1);
-  function frame() {
+  function frame() 
+  {
     if (pos == 350) {
-      clearInterval(id);
+      firstBool=false;
     } else {
       pos++; 
       elem.style.top = pos + 'px'; 
       elem.style.left = pos + 'px'; 
     }
+    if(firstBool)
+    {
+      pos2--;
+      elem.style.top=pos2+'px';
+      elem.style.left=pos2+'px';
+    }
+    if(pos2+1==0)
+    {
+      clearInterval(id2);
+    }
+
+
   }
+ 
+
+
 }
+
+ 
+
 </script>
 
 
