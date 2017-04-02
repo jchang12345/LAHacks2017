@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/Users/justinchang/Desktop/LAHacks2017/index.js"></script>
+<body>
+<style>
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="NutritionHelper.css"/>
+<div class="Memes"> <img src="https://s-media-cache-ak0.pinimg.com/736x/a5/1a/c2/a51ac2ee7d77984723b32492d36f1093.jpg" alt="Some Nutirtion Meme" style="width:304px;height:228px;"> </div>
+<div class="QuoteofDay"> Quote of the Day</div> 
+<div class="OuterCenter">
+<div class="CenterPicture"><img src="http://www.qsarticle.com/wp-content/uploads/nutrition1.jpg" style="margin:auto; width:525px;display:block" />
+</div>
+</div>
+<h1 id="TopParagraphName">
+Penduloo
+</h1>
+<div id="result">someplaceholdertext</div>
+<script type="text/javascript">
+function Requesting()
+{
+	alert("Hello from index.js");
+	
+	index();
+
+}
+	</script>
+<div class="JasonRequest">
+	
+	<button onclick="Requesting()">Random Nutrition?
+		
+	</button>
+</div>
+<!--
+<a href='linkhref.html' id='mylink'>click me</a>
+
+<script type="text/javascript">
+
+var myLink = document.getElementById('mylink');
+
+myLink.onclick = function(){
+
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "Public/Scripts/filename.js."; 
+    document.getElementsByTagName("head")[0].appendChild(script);
+    return false;
+
+}
+</script>
+-->
+
+<form action="index.js" method="post"> <!--need a form handler so backend to manage this part, default is to get. otherwise state that method="post" (useful for senstivie and private information) or method="get" -->
+	<fieldset>
+    <legend>NutritionInfoGet:</legend>
+  Food You Want to Search:<br>
+  <input type="text" name="foodType" placeholder="Search..." id="searchbox"><br>
+  <input type="submit" value="Submit">
+</fieldset>
+</form>
+<br/>
+<br/>
+<p> Memorable Quotes </p>
+<hr/>
+	<ul> <!-- this is how to make numbered list <ol> </ol> -->
+		<li> The food you eat can be the safest form of medicine or the slowest form of poison.</li>
+		<li> Life is like a box of chocolates. It doesn't last long for unhealthy people. </li>
+		<li> Don't eat less, eat right. </li>
+		<li> Good Nutrition = RESULTS. </li>
+		<li> You are what you eat. </li>
+	</ul>
+
+<button onclick="this.innerHTML=Date()">Want to see what time it is?</button>
+
+<p>
+<button onclick="myMove()">Want to see something bounce?</button>
+</p> 
+
+<div id ="container">
+<div id ="animate"></div>
+</div>
+<script>
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 1);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+</script>
+
+
+
+<!--<script>
+document.write(5+6);
+1. LATER TO DO LIST: have the output field/box after figuring out how to node js and wikilink
+2. Fix the title and make itl ess hideous/ bm
+3.JSON stands for JavaScript Object Notation!
+
+</script>
+
+
+one search field
+href to wikipedia  
+-->
+
+</body>
+</head>
+</html>
