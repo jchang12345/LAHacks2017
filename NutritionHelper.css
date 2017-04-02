@@ -1,3 +1,14 @@
+div.resultOutput
+{
+position:absolute;
+    width:350px;
+    height:65px;
+    top:20px;
+    left:800px;
+    font-size:50px;
+  -webkit-transition: -webkit-transform 0.3s ease 0s, opacity 0.2s ease 0s; 
+    transition: background 2s;
+}
 div.JasonRequest
 {
 		position:absolute;

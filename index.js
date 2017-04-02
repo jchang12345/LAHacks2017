@@ -14,7 +14,7 @@ var nameToId = {
 	"energy" : 208,
 }
 
-$.get('https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=DEMO_KEY&nutrients=203&nutrients=204&nutrients=205&nutrients=208&nutrients=269&callback=?&ndbno=0' + mult  , function(data)
+$.get('https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=DEMO_KEY&nutrients=203&nutrients=204&nutrients=205&nutrients=208&nutrients=269&callback=?&ndbno=01001' , function(data)
 {
 	var rtn = {}
 
@@ -29,7 +29,7 @@ $.get('https://api.nal.usda.gov/ndb/nutrients/?format=json&api_key=DEMO_KEY&nutr
 		}
 	}
    console.log(rtn);
-   
+   result.innerHTML=rtn[name];
 });
 
 
